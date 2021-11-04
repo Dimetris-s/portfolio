@@ -1,14 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { menuLinks } from "../utils/data"
+import cv from "../assets/cv.pdf"
 
 const Wrapper = styled.footer`
 	padding: 50px 0;
 	background-color: ${({ theme }) => theme.palette.grey};
 	display: flex;
-	align-items: center;
+	align-items: end;
 	justify-content: center;
-	column-gap: 3rem;
+	column-gap: 5rem;
 `
 
 const Left = styled.ul`
@@ -81,7 +82,11 @@ const Footer = () => {
 				<ContactLink href="https://github.com/Dimetris-s">GitHub: github.com/Dimetris-s</ContactLink>
 				<ContactLink href="tel:+380502875408">Calls: +38 (050) 297-54-08</ContactLink>
 			</Center>
-			<Right></Right>
+			<Right>
+				<MenuLink href={cv} download>
+					Download my CV
+				</MenuLink>
+			</Right>
 		</Wrapper>
 	)
 }

@@ -5,8 +5,8 @@ import { menuLinks } from "../utils/data"
 import { scrollTo } from "../utils/scrollTo"
 
 const Wrapper = styled.div`
-	/* background-color: ${({ theme }) => theme.navbar["bg-color"]}; */
-	background-image: ${({ theme }) => theme.navbar["bg-img"]};
+	background-color: ${({ theme }) => theme.navbar["bg-color"]};
+	/* background-image: ${({ theme }) => theme.navbar["bg-img"]}; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,7 +14,8 @@ const Wrapper = styled.div`
 	height: ${({ theme }) => theme.navbar.height};
 	position: fixed;
 	z-index: 2;
-	box-shadow: 0px -1px 17px 0 ${({ theme }) => theme.palette.yellow};
+	/* box-shadow: 0px -1px 17px 0 ${({ theme }) => theme.palette.yellow}; */
+	box-shadow: 0px -1px 4px 2px white;
 `
 
 const List = styled.ul`
@@ -52,7 +53,7 @@ const MenuLink = styled.a`
 
 const Navbar = () => {
 	return (
-		<Wrapper>
+		<Wrapper data-aos="fade-down">
 			<Container>
 				<List>
 					{menuLinks.map(({ path, text }) => (

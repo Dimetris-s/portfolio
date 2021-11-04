@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Container from "./styled/Container"
 import Navbar from "./Navbar"
+import Title from "./styled/Title"
 import avatar from "../assets/headerphoto.png"
 
 const Wrapper = styled.header`
@@ -28,14 +29,7 @@ const Right = styled.div`
 	display: grid;
 `
 
-const Title = styled.h1`
-	font-family: "NEXT ART";
-	font-size: 3rem;
-	font-weight: 600;
-	line-height: 4rem;
-`
-
-const Name = styled.h2`
+const Name = styled.h1`
 	font-family: "NEXT ART";
 	font-size: 4.5rem;
 	font-weight: 700;
@@ -80,7 +74,7 @@ const Header = () => {
 			<Navbar />
 			<Container>
 				<HeaderHero>
-					<Left>
+					<Left data-aos="fade-right" data-aos-delay="500">
 						<Title>Hello</Title>
 						<Name>I’m Dmytro Mudruk</Name>
 						<About>
@@ -90,7 +84,7 @@ const Header = () => {
 						<Button>Contact me</Button>
 					</Left>
 					<Right>
-						<Image src={avatar} />
+						<Image data-aos="fade-left" data-aos-delay="500" src={avatar} />
 					</Right>
 				</HeaderHero>
 			</Container>

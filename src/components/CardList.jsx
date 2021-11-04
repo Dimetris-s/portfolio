@@ -11,9 +11,9 @@ const Wrapper = styled.div`
 `
 const CardList = () => {
 	return (
-		<Wrapper>
-			{aboutCards.map(({ img, text }) => (
-				<Card key={img} img={img} text={text} />
+		<Wrapper className="aos-list">
+			{aboutCards.map(({ img, text }, index) => (
+				<Card index={index} key={img} img={img} text={text} />
 			))}
 		</Wrapper>
 	)

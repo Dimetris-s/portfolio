@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Container from "./styled/Container"
 import CardList from "./CardList"
+import SkillsTitle from "./styled/Title"
 import bg_img from "../assets/about/about_bg.png"
 import about1 from "../assets/about/about1.jpg"
 import about2 from "../assets/about/about2.jpg"
@@ -10,9 +11,14 @@ import about4 from "../assets/about/about4.jpg"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.grey};
-	padding: 115px 0;
+	padding: 65px 0 115px;
 `
-const Skills = styled.div``
+const Skills = styled.div`
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 5rem;
+`
 const Info = styled.div`
 	padding-top: 200px;
 	padding-bottom: 60px;
@@ -85,6 +91,7 @@ const About = () => {
 		<Wrapper>
 			<Container>
 				<Skills>
+					<SkillsTitle>Technologies</SkillsTitle>
 					<CardList />
 				</Skills>
 				<Info id="about">

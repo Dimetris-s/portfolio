@@ -24,9 +24,9 @@ const Text = styled.p`
 	font-size: ${({ theme }) => theme.text.size};
 `
 
-const Card = ({ img, text }) => {
+const Card = ({ img, text, index }) => {
 	return (
-		<Wrapper>
+		<Wrapper data-aos="zoom-out" data-aos-offset="100" data-aos-delay={index * 150} data-aos-anchor=".aos-list">
 			<Image src={img} />
 			<Text>{text}</Text>
 		</Wrapper>

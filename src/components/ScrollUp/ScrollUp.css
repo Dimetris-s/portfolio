@@ -1,0 +1,14 @@
+.scroll-enter {
+	opacity: 0;
+}
+.scroll-enter-active {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+.scroll-exit {
+	opacity: 1;
+}
+.scroll-exit-active {
+	opacity: 0;
+	transition: opacity 300ms;
+}

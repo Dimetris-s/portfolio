@@ -4,7 +4,7 @@ import About from "./components/About"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Portfolio from "./components/Portfolio"
-import ScrollUp from "./components/ScrollUp"
+import ScrollUp from "./components/ScrollUp/ScrollUp"
 
 const Wrapper = styled.div`
 	display: flex;

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import arrowUp from "../assets/slider/arrow-up.svg"
-import { scrollTo } from "../utils/scrollTo"
-
-const Wrapper = styled.div`
+import arrowUp from "../../assets/slider/arrow-up.svg"
+import { scrollTo } from "../../utils/scrollTo"
+import { CSSTransition } from "react-transition-group"
+import "./ScrollUp.css"
+const Button = styled.div`
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -15,10 +16,9 @@ const Wrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	opacity: 0.7;
 	transition: all 0.3s ease;
 	&:hover {
-		opacity: 1;
+		box-shadow: 0 0 5px 1px ${({ theme }) => theme.palette.yellow};
 	}
 	&::after {
 		content: "";
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 `
 
 const ScrollUp = props => {
-	const [show, setShow] = useState(true)
+	const [show, setShow] = useState(false)
 	useEffect(() => {
 		window.addEventListener("scroll", checkScroll)
 
@@ -50,9 +50,11 @@ const ScrollUp = props => {
 		scrollTo(null, { position: 0 })
 	}
 
-	if (!show) return null
-
-	return <Wrapper onClick={clickHandler} {...props} />
+	return (
+		<CSSTransition unmountOnExit in={show} timeout={300} classNames={"scroll"}>
+			<Button onClick={clickHandler} />
+		</CSSTransition>
+	)
 }
 
 export default ScrollUp
