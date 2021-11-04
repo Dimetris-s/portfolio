@@ -3,7 +3,7 @@ import cssImg from "../assets/cardIcons/css.svg"
 import sassImg from "../assets/cardIcons/sass.svg"
 import jsImg from "../assets/cardIcons/js.svg"
 import reactImg from "../assets/cardIcons/react.svg"
-import reduxImg from "../assets/cardIcons/redux.svg"
+import toolsImg from "../assets/cardIcons/tools.svg"
 import nodejsImg from "../assets/cardIcons/nodejs.svg"
 import _1 from "../assets/slider/1.jpg"
 import _2 from "../assets/slider/2.jpg"
@@ -20,30 +20,51 @@ export const aboutCards = [
 	{
 		img: htmlImg,
 		text: "HTML 5",
+		info: ["Responsive layout", "Adaptive layout", "Semantic layout"],
 	},
 	{
 		img: cssImg,
 		text: "CSS 3",
+		info: ["Bootstrap", "CSS Grid", "CSS flex-box", "CSS media-queries", "CSS animations"],
 	},
 	{
 		img: sassImg,
 		text: "Sass/Scss",
+		info: ["Mixins", "Variables", "Nesting", "Color functions"],
 	},
 	{
 		img: jsImg,
 		text: "JavaScript/ES6+",
+		info: [
+			"ES6+ features",
+			"Promises",
+			"async/await syntax",
+			"import/export syntax",
+			"OOP basics",
+			"jQuery",
+		],
 	},
 	{
 		img: reactImg,
 		text: "ReactJS",
-	},
-	{
-		img: reduxImg,
-		text: "Redux",
+		info: [
+			"React components",
+			"hooks",
+			"redux/redux-thunk",
+			"Context",
+			"MUI/styled-components",
+			"css-modules",
+		],
 	},
 	{
 		img: nodejsImg,
 		text: "NodeJS",
+		info: ["Basic of express", "Basic of MongoDB/mongoose", "REST/API", "Firebase"],
+	},
+	{
+		img: toolsImg,
+		text: "Tools/Addtional",
+		info: ["Webpack", "Gulp", "Prettier", "ESLint", "Git", "npm/yarn", "Figma"],
 	},
 ]
 

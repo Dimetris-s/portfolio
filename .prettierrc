@@ -6,7 +6,7 @@
     "bracketSpacing": true,
     "endOfLine": "lf",
     "bracketSameLine": true,
-    "printWidth": 120,
+    "printWidth": 100,
     "singleQuote": false,
     "useTabs": true,
     "quoteProps": "as-needed"
