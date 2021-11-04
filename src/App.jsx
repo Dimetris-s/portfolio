@@ -4,12 +4,14 @@ import About from "./components/About"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Portfolio from "./components/Portfolio"
+import ScrollUp from "./components/ScrollUp"
 
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	width: 100%;
+	position: relative;
 `
 
 const Main = styled.main`
@@ -27,6 +29,7 @@ const App = () => {
 				<Portfolio />
 			</Main>
 			<Footer />
+			<ScrollUp />
 		</Wrapper>
 	)
 }

@@ -3,83 +3,77 @@ import styled from "styled-components"
 import leftArrow from "../assets/slider/arrow-left.svg"
 import rightArrow from "../assets/slider/arrow-right.svg"
 import linkArrow from "../assets/slider/arrow-right-gold.svg"
-import { slides } from "../utils/data"
 
 const Wrapper = styled.div`
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: min(1000px, 80vw);
+	height: 500px;
 `
 const SliderWrapper = styled.div`
-	width: min(970px, 70vw);
-	max-height: 450px;
+	height: 100%;
+	width: 100%;
 	border-radius: 30px;
 	background-color: ${({ theme }) => theme.palette.grey};
 	overflow: hidden;
-	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-		max-height: none;
-	}
 `
 
 const SlidesContainer = styled.div`
-	width: 100%;
-	max-height: 100%;
 	display: flex;
 	align-items: center;
+	height: 100%;
+	width: 100%;
 	transform: translateX(-${({ activeSlide }) => activeSlide * 100}%);
-	transition: all 0.4s ease-in;
-	position: relative;
-	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-		align-items: flex-start;
-	}
+	transition: transform 0.6s ease-in;
 `
 const Slide = styled.div`
-	max-height: 450px;
-	padding: min(50px, 4vw);
-	width: 100%;
+	flex-shrink: 0;
 	display: flex;
 	align-items: center;
+	height: 100%;
 	justify-content: space-between;
-	column-gap: min(50px, 10%);
-	flex-shrink: 0;
+	width: 100%;
+	gap: min(50px, 10%);
+	padding: min(35px, 5vw);
 	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
 		flex-direction: column;
-		justify-content: flex-start;
-		max-height: none;
 	}
 `
 const Image = styled.div`
 	border-radius: 30px;
 	overflow: hidden;
-	flex: 1.7;
-	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-		margin-bottom: 10px;
-	}
+	height: 100%;
+	width: 100%;
+	flex: 1.5;
+
 	& img {
-		max-width: 100%;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
+		object-position: center;
 	}
 `
 
 const SlideContent = styled.div`
-	display: flex;
 	flex: 1;
+	height: 100%;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	row-gap: 25px;
+	justify-content: flex-start;
 	color: ${({ theme }) => theme.palette.white};
-	height: 344px;
 `
 const SlideTitle = styled.h4`
 	font-size: 24px;
 	font-weight: 300;
+	margin-bottom: min(20px, 5%);
 `
 const SlideText = styled.p`
-	text-align: center;
 	max-height: 300px;
 	overflow-y: auto;
 	flex-grow: 1;
+	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+		max-height: 100px;
+	}
 	&::-webkit-scrollbar {
 		width: 5px;
 		background-color: transparent;
@@ -93,11 +87,9 @@ const SlideText = styled.p`
 	&::-webkit-scrollbar-thumb:hover {
 		background-color: #666666;
 	}
-	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-		max-height: 100px;
-	}
 `
 const SlideLink = styled.a`
+	margin-top: min(10px, 3%);
 	text-decoration: none;
 	color: ${({ theme }) => theme.palette.yellow};
 	display: flex;
@@ -135,18 +127,18 @@ const Arrow = styled.div`
 		opacity: 1;
 	}
 `
-const Slider = () => {
+const Slider = ({ items }) => {
 	const [slideIndex, setSlideIndex] = useState(0)
 	const clickHandler = direction => {
 		if (direction === "left") {
 			if (slideIndex === 0) {
-				setSlideIndex(slides.length - 1)
+				setSlideIndex(items.length - 1)
 				return
 			} else {
 				setSlideIndex(prev => prev - 1)
 			}
 		} else {
-			if (slideIndex === slides.length - 1) {
+			if (slideIndex === items.length - 1) {
 				setSlideIndex(0)
 				return
 			} else {
@@ -158,15 +150,15 @@ const Slider = () => {
 		<Wrapper>
 			<SliderWrapper>
 				<SlidesContainer activeSlide={slideIndex}>
-					{slides.map(slide => (
-						<Slide key={slide.id}>
+					{items.map(item => (
+						<Slide key={item.id}>
 							<Image>
-								<img src={slide.img} alt="slide" />
+								<img src={item.img} alt="slide" />
 							</Image>
 							<SlideContent>
-								<SlideTitle>{slide.title}</SlideTitle>
-								<SlideText>{slide.text}</SlideText>
-								<SlideLink href={slide.link}>Discover</SlideLink>
+								<SlideTitle>{item.title}</SlideTitle>
+								<SlideText>{item.text}</SlideText>
+								<SlideLink href={item.link}>Discover</SlideLink>
 							</SlideContent>
 						</Slide>
 					))}

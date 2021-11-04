@@ -52,7 +52,9 @@ export const slides = [
 		id: 1,
 		img: _1,
 		title: "Слайд 1",
-		text: "Текст1",
+		text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nulla maiores magni ut veniam
+		non sun, quod aliquid nam, recusandae, libero suscipit nemo laudantium iusto inventore
+		voluptatem iste atque ipsam quia nihil debitis? Explicabo error velit sunt nesciunt`,
 		link: "#",
 	},
 	{
@@ -78,7 +80,7 @@ export const slides = [
 		id: 3,
 		img: _3,
 		title: "Слайд 3",
-		text: "Текст3",
+		text: "Lorem ipsum dolor sit amet consectetur",
 		link: "#",
 	},
 ]

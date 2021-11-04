@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Slider from "./Slider"
 import Container from "./styled/Container"
 import Flex from "./styled/Flex"
+import { slides } from "../utils/data"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.black};
@@ -23,7 +24,7 @@ const Portfolio = () => {
 			<Container>
 				<Flex direction="column" align="center">
 					<Title>Portfolio</Title>
-					<Slider />
+					<Slider items={slides} />
 				</Flex>
 			</Container>
 		</Wrapper>

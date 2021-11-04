@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Container from "./styled/Container"
 import { menuLinks } from "../utils/data"
+import { scrollTo } from "../utils/scrollTo"
 
 const Wrapper = styled.div`
 	/* background-color: ${({ theme }) => theme.navbar["bg-color"]}; */
@@ -56,7 +57,9 @@ const Navbar = () => {
 				<List>
 					{menuLinks.map(({ path, text }) => (
 						<li key={path}>
-							<MenuLink href={path}>{text}</MenuLink>
+							<MenuLink onClick={event => scrollTo(event, { elementId: path })} href={path}>
+								{text}
+							</MenuLink>
 						</li>
 					))}
 				</List>

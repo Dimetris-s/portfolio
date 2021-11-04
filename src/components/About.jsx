@@ -19,7 +19,7 @@ const Info = styled.div`
 	display: flex;
 	justify-content: center;
 	background: url(${bg_img}) no-repeat;
-	background-size: cover;
+	background-size: contain;
 `
 const InfoContent = styled.div`
 	position: relative;
