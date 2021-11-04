@@ -82,24 +82,24 @@ const Image = styled.div`
 `
 const About = () => {
 	return (
-		<Wrapper id="about">
+		<Wrapper>
 			<Container>
 				<Skills>
 					<CardList />
 				</Skills>
-				<Info>
+				<Info id="about">
 					<InfoContent>
 						<Image position={{ top: -13, left: -50 }}>
-							<img src={about1} />
+							<img src={about1} alt="Dima" />
 						</Image>
 						<Image position={{ left: -50, bottom: -15 }}>
-							<img src={about2} />
+							<img src={about2} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, top: -11 }}>
-							<img src={about3} />
+							<img src={about3} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, bottom: -17 }}>
-							<img src={about4} />
+							<img src={about4} alt="Dima" />
 						</Image>
 						<Title>About me</Title>
 						<Text>

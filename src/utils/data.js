@@ -59,7 +59,19 @@ export const slides = [
 		id: 2,
 		img: _2,
 		title: "Слайд 2",
-		text: "Текст2",
+		text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nulla maiores magni ut veniam
+		non sunt, quod aliquid nam, recusandae, libero suscipit nemo laudantium iusto inventore
+		voluptatem iste atque ipsam quia nihil debitis? Explicabo error velit sunt nesciunt
+		dignissimos? Ex omnis cupiditate facere eum dolorem aspernatur minima nihil sapiente
+		molestiae quo, iusto quis voluptatibus? Assumenda quam deserunt et natus eius recusandae,
+		corporis ipsa esse iste! Labore molestiae excepturi ipsam assumenda.menda quam deserunt et
+		natus eius recusandae, corporis ipsa esse iste! Labore molestiae excepturi ipsam
+		assumenda.menda quam deserunt et natus eius recusandae, corporis ipsa esse iste! Labore
+		molestiae excepturi ipsam assumenda.acere eum dolorem aspernatur minima nihil sapiente
+		molestiae quo, iusto quis voluptatibus? Assumenda quam deserunt et natus eius recusandae,
+		corporis ipsa esse iste! Labore molestiae excepturi ipsam assumenda.menda quam deserunt et
+		natus eius recusandae, corporis ipsa esse iste! Labore molestiae excepturi ipsam
+		assumenda.menda quam deserunt et natus eius recusandae, corporis ipsa esse iste! Labore`,
 		link: "#",
 	},
 	{
