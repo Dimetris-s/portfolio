@@ -11,6 +11,7 @@ import _3 from "../assets/slider/3.jpg"
 
 export const menuLinks = [
 	{ path: "#", text: "Home" },
+	{ path: "#technologies", text: "Technologies" },
 	{ path: "#about", text: "About Me" },
 	{ path: "#portfolio", text: "Portfolio" },
 	{ path: "#contact", text: "Contact" },

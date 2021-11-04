@@ -88,7 +88,7 @@ const Image = styled.div`
 `
 const About = () => {
 	return (
-		<Wrapper>
+		<Wrapper id="technologies">
 			<Container>
 				<Skills>
 					<SkillsTitle>Technologies</SkillsTitle>
