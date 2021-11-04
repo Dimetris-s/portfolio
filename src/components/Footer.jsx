@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { menuLinks } from "../utils/data"
 import cv from "../assets/cv.pdf"
+import { scrollTo } from "../utils/scrollTo"
 
 const Wrapper = styled.footer`
 	padding: 50px 0;
 	background-color: ${({ theme }) => theme.palette.grey};
 	display: flex;
-	align-items: end;
+	align-items: flex-start;
 	justify-content: center;
 	column-gap: 5rem;
 `
@@ -29,6 +30,7 @@ const Right = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	align-self: end;
 `
 
 const MenuLink = styled.a`
@@ -58,8 +60,9 @@ const MenuLink = styled.a`
 `
 
 const InfoText = styled.p`
-	color: ${({ theme }) => theme.palette.white};
+	color: ${({ theme }) => theme.palette.yellow};
 	font-size: ${({ theme }) => theme.text.size};
+	font-weight: 600;
 `
 
 const ContactLink = styled(MenuLink)`
@@ -72,7 +75,9 @@ const Footer = () => {
 			<Left>
 				{menuLinks.map(({ path, text }) => (
 					<li key={path}>
-						<MenuLink href={path}>{text}</MenuLink>
+						<MenuLink onClick={event => scrollTo(event, { elementId: path })} href={path}>
+							{text}
+						</MenuLink>
 					</li>
 				))}
 			</Left>

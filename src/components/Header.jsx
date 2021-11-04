@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import Container from "./styled/Container"
 import Navbar from "./Navbar"
 import Title from "./styled/Title"
-import avatar from "../assets/headerphoto.png"
+import avatar from "../assets/bigphoto.png"
 
 const Wrapper = styled.header`
 	background-color: ${({ theme }) => theme.palette.black};
 	width: 100%;
+	height: 100vh;
 `
 const HeaderHero = styled.div`
 	display: flex;
@@ -15,6 +15,9 @@ const HeaderHero = styled.div`
 	justify-content: space-between;
 	color: #fff;
 	padding-top: ${({ theme }) => theme.navbar.height};
+	padding-left: 40px;
+	padding-right: 10px;
+	height: 100%;
 `
 
 const Left = styled.div`
@@ -25,8 +28,8 @@ const Left = styled.div`
 	color: #e4e4e4;
 `
 const Right = styled.div`
-	flex: 1;
-	display: grid;
+	flex: 1.7;
+	height: 100%;
 `
 
 const Name = styled.h1`
@@ -63,31 +66,43 @@ const Button = styled.button`
 		transform: translateY(1px);
 	}
 `
-const Image = styled.img`
-	grid-area: 1/2;
-	object-fit: cover;
+const Image = styled.div`
+	height: 100%;
+	& img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		object-position: bottom;
+	}
 `
 
 const Header = () => {
 	return (
 		<Wrapper>
 			<Navbar />
-			<Container>
-				<HeaderHero>
-					<Left data-aos="fade-right" data-aos-delay="500">
-						<Title>Hello</Title>
-						<Name>I’m Dmytro Mudruk</Name>
-						<About>
-							I've been doing web design, front-end and back-end development for a year now. Do you need a
-							website design, site layout, or maybe a turnkey website? Then contact me
-						</About>
-						<Button>Contact me</Button>
-					</Left>
-					<Right>
-						<Image data-aos="fade-left" data-aos-delay="500" src={avatar} />
-					</Right>
-				</HeaderHero>
-			</Container>
+
+			<HeaderHero>
+				<Left>
+					<Title data-aos="fade-right" data-aos-delay="400">
+						Hello
+					</Title>
+					<Name data-aos="fade-right" data-aos-delay="600">
+						I’m Dmytro Mudruk
+					</Name>
+					<About data-aos="fade-right" data-aos-delay="800">
+						I've been doing web design, front-end and back-end development for a year now. Do you need a
+						website design, site layout, or maybe a turnkey website? Then contact me
+					</About>
+					<Button data-aos="fade-right" data-aos-delay="1000">
+						Contact me
+					</Button>
+				</Left>
+				<Right>
+					<Image data-aos="fade-in" data-aos-delay="1200" data-aos-duration="1200">
+						<img src={avatar} alt="avatar" />
+					</Image>
+				</Right>
+			</HeaderHero>
 		</Wrapper>
 	)
 }
