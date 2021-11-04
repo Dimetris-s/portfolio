@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Container from "./styled/Container"
 import { menuLinks } from "../utils/data"
 import { scrollTo } from "../utils/scrollTo"
+import { navbarBorderKeyframes } from "./styled/keyframes"
 
 const Wrapper = styled.div`
 	background-color: ${({ theme }) => theme.navbar["bg-color"]};
@@ -15,7 +16,8 @@ const Wrapper = styled.div`
 	position: fixed;
 	z-index: 2;
 	/* box-shadow: 0px -1px 17px 0 ${({ theme }) => theme.palette.yellow}; */
-	box-shadow: 0px -1px 4px 2px white;
+	/* box-shadow: 0px -1px 4px 2px white; */
+	animation: ${navbarBorderKeyframes} 5s ease-in-out infinite forwards alternate-reverse;
 `
 
 const List = styled.ul`
@@ -53,12 +55,14 @@ const MenuLink = styled.a`
 
 const Navbar = () => {
 	return (
-		<Wrapper data-aos="fade-down">
+		<Wrapper data-aos="fade-down" data-aos-duration="1000">
 			<Container>
 				<List>
 					{menuLinks.map(({ path, text }) => (
 						<li key={path}>
-							<MenuLink onClick={event => scrollTo(event, { elementId: path })} href={path}>
+							<MenuLink
+								onClick={event => scrollTo(event, { elementId: path })}
+								href={path}>
 								{text}
 							</MenuLink>
 						</li>

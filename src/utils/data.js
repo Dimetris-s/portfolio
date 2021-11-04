@@ -55,12 +55,19 @@ export const aboutCards = [
 			"Context",
 			"MUI/styled-components",
 			"css-modules",
+			"Forms and validation",
 		],
 	},
 	{
 		img: nodejsImg,
 		text: "NodeJS",
-		info: ["Basic of express", "Basic of MongoDB/mongoose", "REST/API", "Firebase"],
+		info: [
+			"Basic of express",
+			"Basic of MongoDB/mongoose",
+			"REST/API",
+			"Firebase",
+			"Node Telegram Bot Api",
+		],
 	},
 	{
 		img: toolsImg,
