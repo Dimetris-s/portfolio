@@ -123,6 +123,11 @@ const Arrow = styled.div`
 	cursor: pointer;
 	opacity: 0.8;
 	transition: all 0.3s ease-in;
+	@media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		top: 60%;
+		left: ${({ direction }) => direction === "left" && "10px"};
+		right: ${({ direction }) => direction === "right" && "10px"};
+	}
 	&:hover {
 		opacity: 1;
 	}

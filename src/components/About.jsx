@@ -17,7 +17,7 @@ const Skills = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 5rem;
+	row-gap: min(5rem, 10vw);
 `
 const Info = styled.div`
 	padding-top: 200px;
@@ -110,15 +110,18 @@ const About = () => {
 						</Image>
 						<Title>About me</Title>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quae vel dolorem veritatis
-							nisi pariatur maxime non velit quo, nam cupiditate quos, perferendis exercitationem ducimus
-							deserunt tenetur fugit molestias aliquid distinctio. Praesentium repellendus beatae minima
-							modi dignissimos ea necessitatibus, inventore doloremque illo ullam accusantium tempora quae
-							molestias? Voluptatem at enim suscipit eveniet itaque fuga consequuntur, commodi, nobis,
-							laudantium quisquam dignissimos quia perspiciatis ipsa mollitia vero autem! Dignissimos
-							dolores optio quod architecto consequuntur autem aut. Atque consequuntur sunt optio
-							consectetur nostrum delectus! Ipsum, atque. Voluptates, non aperiam quae sed ipsam nisi
-							minima consequatur voluptate unde officia quas? Officia accusamus molestias repellendus!
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quae
+							vel dolorem veritatis nisi pariatur maxime non velit quo, nam cupiditate
+							quos, perferendis exercitationem ducimus deserunt tenetur fugit
+							molestias aliquid distinctio. Praesentium repellendus beatae minima modi
+							dignissimos ea necessitatibus, inventore doloremque illo ullam
+							accusantium tempora quae molestias? Voluptatem at enim suscipit eveniet
+							itaque fuga consequuntur, commodi, nobis, laudantium quisquam
+							dignissimos quia perspiciatis ipsa mollitia vero autem! Dignissimos
+							dolores optio quod architecto consequuntur autem aut. Atque consequuntur
+							sunt optio consectetur nostrum delectus! Ipsum, atque. Voluptates, non
+							aperiam quae sed ipsam nisi minima consequatur voluptate unde officia
+							quas? Officia accusamus molestias repellendus!
 						</Text>
 					</InfoContent>
 				</Info>

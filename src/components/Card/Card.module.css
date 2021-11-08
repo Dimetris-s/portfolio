@@ -43,3 +43,11 @@
 	flex-direction: column;
 	justify-content: start;
 }
+@media screen and (max-width: 767px) {
+	.card,
+	.front,
+	.back {
+		width: 270px;
+		height: 270px;
+	}
+}

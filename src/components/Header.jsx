@@ -30,6 +30,9 @@ const Left = styled.div`
 const Right = styled.div`
 	flex: 1.7;
 	height: 100%;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		display: none;
+	}
 `
 
 const Name = styled.h1`
@@ -38,6 +41,10 @@ const Name = styled.h1`
 	font-weight: 700;
 	line-height: 5rem;
 	margin-bottom: 25px;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		font-size: 2rem;
+		line-height: 2rem;
+	}
 `
 
 const About = styled.p`
@@ -76,6 +83,14 @@ const Image = styled.div`
 	}
 `
 
+const Hello = styled(Title)`
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		font-size: 4.5rem;
+		line-height: 4.5rem;
+		margin-bottom: 1rem;
+	}
+`
+
 const Header = () => {
 	return (
 		<Wrapper>
@@ -83,15 +98,16 @@ const Header = () => {
 
 			<HeaderHero>
 				<Left>
-					<Title data-aos="fade-right" data-aos-delay="400">
+					<Hello data-aos="fade-right" data-aos-delay="400">
 						Hello
-					</Title>
+					</Hello>
 					<Name data-aos="fade-right" data-aos-delay="600">
 						I’m Dmytro Mudruk
 					</Name>
 					<About data-aos="fade-right" data-aos-delay="800">
-						I've been doing web design, front-end and back-end development for a year now. Do you need a
-						website design, site layout, or maybe a turnkey website? Then contact me
+						I've been doing web design, front-end and back-end development for a year
+						now. Do you need a website design, site layout, or maybe a turnkey website?
+						Then contact me
 					</About>
 					<Button data-aos="fade-right" data-aos-delay="1000">
 						Contact me

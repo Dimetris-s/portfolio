@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Container from "./styled/Container"
 import { menuLinks } from "../utils/data"
 import { scrollTo } from "../utils/scrollTo"
 import { navbarBorderKeyframes } from "./styled/keyframes"
+import BurgerMenu from "./BurgerMenu"
+import Burger from "./Burger"
 
 const Wrapper = styled.div`
 	background-color: ${({ theme }) => theme.navbar["bg-color"]};
@@ -26,6 +28,9 @@ const List = styled.ul`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		display: none;
+	}
 `
 
 const MenuLink = styled.a`
@@ -54,8 +59,15 @@ const MenuLink = styled.a`
 `
 
 const Navbar = () => {
+	const [openMenu, setOpenMenu] = useState(false)
+
+	const toggleMenuOpen = () => {
+		setOpenMenu(prev => !prev)
+	}
 	return (
 		<Wrapper data-aos="fade-down" data-aos-duration="1000">
+			<BurgerMenu onClick={toggleMenuOpen} isOpen={openMenu} />
+			<Burger isOpen={openMenu} onClick={toggleMenuOpen} />
 			<Container>
 				<List>
 					{menuLinks.map(({ path, text }) => (

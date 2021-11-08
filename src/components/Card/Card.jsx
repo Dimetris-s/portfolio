@@ -14,7 +14,6 @@ const List = styled.ul`
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
-	/* list-style-type: disc; */
 `
 const ListItem = styled.li`
 	color: ${({ theme }) => theme.palette.white};
@@ -46,7 +45,7 @@ const Card = ({ img, text, index, info }) => {
 					<Title>I'm working with:</Title>
 					<List>
 						{info.map(item => (
-							<ListItem>{item}</ListItem>
+							<ListItem key={item}>{item}</ListItem>
 						))}
 					</List>
 				</div>

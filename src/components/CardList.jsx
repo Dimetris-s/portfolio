@@ -8,6 +8,9 @@ const Wrapper = styled.div`
 	flex-wrap: wrap;
 	gap: max(2vw, 16px);
 	justify-content: center;
+	@media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		flex-direction: column;
+	}
 `
 const CardList = () => {
 	return (
