@@ -7,7 +7,7 @@ import { aboutImages } from "../../utils/images"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.grey};
-	padding: 65px 0 115px;
+	padding: min(65px, 10vw) 0 min(115px, 10vw);
 `
 const Skills = styled.div`
 	display: flex;
@@ -16,8 +16,8 @@ const Skills = styled.div`
 	row-gap: min(5rem, 10vw);
 `
 const Info = styled.div`
-	padding-top: 200px;
-	padding-bottom: 60px;
+	padding-top: min(200px, 10vw);
+	padding-bottom: min(60px, 7vw);
 	display: flex;
 	justify-content: center;
 	background: url(${bg_img}) no-repeat;

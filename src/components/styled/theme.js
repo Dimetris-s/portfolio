@@ -20,7 +20,7 @@ const theme = {
 		xl: 1200,
 		lg: 1024,
 		md: 991,
-		sm: 767,
+		sm: 768,
 		xs: 575,
 	},
 	burger: {

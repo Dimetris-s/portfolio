@@ -34,6 +34,7 @@ export const aboutCards = [
 			"import/export syntax",
 			"OOP basics",
 			"jQuery",
+			"Forms and validation",
 		],
 	},
 	{
@@ -41,12 +42,11 @@ export const aboutCards = [
 		text: "ReactJS",
 		info: [
 			"React components",
-			"hooks",
-			"redux/redux-thunk",
-			"Context",
+			"React hooks",
+			"Redux",
+			"Context API",
 			"MUI/styled-components",
-			"css-modules",
-			"Forms and validation",
+			"CSS-modules",
 		],
 	},
 	{

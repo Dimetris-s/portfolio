@@ -133,7 +133,7 @@ const Arrow = styled.div`
 	opacity: 0.8;
 	transition: all 0.3s ease-in;
 	@media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
-		top: 60%;
+		/* top: 60%; */
 		left: ${({ direction }) => direction === "left" && "10px"};
 		right: ${({ direction }) => direction === "right" && "10px"};
 	}

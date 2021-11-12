@@ -6,8 +6,8 @@ import { slides } from "../../utils/data"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.black};
-	padding-top: 100px;
-	padding-bottom: 150px;
+	padding-top: min(10vw, 100px);
+	padding-bottom: min(10vw, 150px);
 `
 const PortfolioTitle = styled(Title)`
 	color: #fff;
