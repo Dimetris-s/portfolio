@@ -106,17 +106,21 @@ const About = () => {
 						</Image>
 						<Title>About me</Title>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem natus
-							deserunt consectetur in quam debitis autem quod ad et corrupti omnis,
-							aperiam voluptate sint provident earum eos eaque, totam necessitatibus
-							commodi recusandae labore harum. Obcaecati magni eius amet delectus sed
-							minus ipsum eum nesciunt libero sapiente. Esse repellendus tempore,
-							nihil laudantium perspiciatis laboriosam. Assumenda illum quaerat
-							obcaecati hic veritatis distinctio nostrum maxime nesciunt? Libero
-							asperiores maiores obcaecati tenetur culpa doloribus error,
-							necessitatibus earum accusamus accusantium itaque ex ullam numquam minus
-							nihil quia iure enim dolores! Suscipit vel odit enim molestiae tempore
-							voluptatum quibusdam, sit, deserunt qui quo maiores, aperiam voluptates!
+							Hello again! As you already know my name is Dmitry. I am 23 years old, I
+							was born and live in Odessa (Ukraine). In the past, a professional
+							dancer and performer in theatrical performances and shows. About two
+							years ago I started to be interested in programming as another of my
+							hobbies, and realized pretty quickly that programming could be something
+							more in my life, than just a hobby. I discovered that there are endless
+							possibilities for creativity in this profession, and for my own
+							realization, as well as the ability not to be tied to a certain place
+							and travel, not to mention the fact that this is a profession of the
+							future that develops over time and makes it possible to be part of
+							advanced technologies. I approach my work with responsibility and
+							attention to detail. I know how to listen and always strive to find the
+							best and the optimal solution to the problem. You can see my portfolio
+							below, as well as download my resume, where it is described in more
+							detail my skills.
 						</Text>
 					</InfoContent>
 				</Info>
