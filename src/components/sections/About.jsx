@@ -1,13 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import Container from "./styled/Container"
-import CardList from "./CardList"
-import SkillsTitle from "./styled/Title"
-import bg_img from "../assets/about/about_bg.png"
-import about1 from "../assets/about/about1.jpg"
-import about2 from "../assets/about/about2.jpg"
-import about3 from "../assets/about/about6.png"
-import about4 from "../assets/about/about4.jpg"
+import CardList from "../UI/CardList"
+import { Title as SkillsTitle, Container } from "../styled"
+import bg_img from "../../assets/about/about_bg.png"
+import { aboutImages } from "../../utils/images"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.grey};
@@ -97,31 +93,30 @@ const About = () => {
 				<Info id="about">
 					<InfoContent>
 						<Image position={{ top: -13, left: -50 }}>
-							<img src={about1} alt="Dima" />
+							<img src={aboutImages[0]} alt="Dima" />
 						</Image>
 						<Image position={{ left: -50, bottom: -15 }}>
-							<img src={about2} alt="Dima" />
+							<img src={aboutImages[1]} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, top: -11 }}>
-							<img src={about3} alt="Dima" />
+							<img src={aboutImages[2]} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, bottom: -17 }}>
-							<img src={about4} alt="Dima" />
+							<img src={aboutImages[3]} alt="Dima" />
 						</Image>
 						<Title>About me</Title>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quae
-							vel dolorem veritatis nisi pariatur maxime non velit quo, nam cupiditate
-							quos, perferendis exercitationem ducimus deserunt tenetur fugit
-							molestias aliquid distinctio. Praesentium repellendus beatae minima modi
-							dignissimos ea necessitatibus, inventore doloremque illo ullam
-							accusantium tempora quae molestias? Voluptatem at enim suscipit eveniet
-							itaque fuga consequuntur, commodi, nobis, laudantium quisquam
-							dignissimos quia perspiciatis ipsa mollitia vero autem! Dignissimos
-							dolores optio quod architecto consequuntur autem aut. Atque consequuntur
-							sunt optio consectetur nostrum delectus! Ipsum, atque. Voluptates, non
-							aperiam quae sed ipsam nisi minima consequatur voluptate unde officia
-							quas? Officia accusamus molestias repellendus!
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem natus
+							deserunt consectetur in quam debitis autem quod ad et corrupti omnis,
+							aperiam voluptate sint provident earum eos eaque, totam necessitatibus
+							commodi recusandae labore harum. Obcaecati magni eius amet delectus sed
+							minus ipsum eum nesciunt libero sapiente. Esse repellendus tempore,
+							nihil laudantium perspiciatis laboriosam. Assumenda illum quaerat
+							obcaecati hic veritatis distinctio nostrum maxime nesciunt? Libero
+							asperiores maiores obcaecati tenetur culpa doloribus error,
+							necessitatibus earum accusamus accusantium itaque ex ullam numquam minus
+							nihil quia iure enim dolores! Suscipit vel odit enim molestiae tempore
+							voluptatum quibusdam, sit, deserunt qui quo maiores, aperiam voluptates!
 						</Text>
 					</InfoContent>
 				</Info>

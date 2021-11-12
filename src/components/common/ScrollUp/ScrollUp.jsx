@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import arrowUp from "../../assets/slider/arrow-up.svg"
-import { scrollTo } from "../../utils/scrollTo"
 import { CSSTransition } from "react-transition-group"
+import arrowUp from "../../../assets/slider/arrow-up.svg"
+import { scrollTo } from "../../../utils/scrollTo"
 import "./ScrollUp.css"
 const Button = styled.div`
 	width: 60px;

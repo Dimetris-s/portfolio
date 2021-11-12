@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import cv from "../assets/cv.pdf"
+import cv from "../../assets/cv.pdf"
+import { MenuLink } from "../styled"
 
 const Wrapper = styled.footer`
 	padding: 50px 10px;
@@ -29,32 +30,6 @@ const Right = styled.div`
 	align-self: end;
 	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
 		align-self: start;
-	}
-`
-
-const MenuLink = styled.a`
-	text-decoration: none;
-	color: ${({ theme }) => theme.palette.white};
-	font-size: ${({ theme }) => theme.text.size};
-	padding: 0.3rem 0.1rem;
-	position: relative;
-	&:focus::after {
-		width: 100%;
-		outline: none;
-	}
-	&:hover::after {
-		transition: width 0.3s ease;
-		width: 100%;
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		height: 1px;
-		width: 0;
-		background-color: ${({ theme }) => theme.palette.yellow};
-		bottom: 0;
-		left: 0;
-		transition: width 0.3s ease;
 	}
 `
 

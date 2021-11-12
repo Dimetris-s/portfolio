@@ -39,7 +39,7 @@ const Middle = styled.span`
 	width: ${({ theme }) => theme.burger.size}px;
 	background-color: ${({ theme }) => theme.palette.white};
 	border-radius: 10px;
-	height: 2px;
+	height: 3px;
 	top: 50%;
 	transform: translateY(-50%) scale(${({ isOpen }) => (isOpen ? "0" : "1")});
 	transition: all 0.3s ease;

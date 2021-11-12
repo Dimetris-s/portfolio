@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { aboutCards } from "../utils/data"
+import { aboutCards } from "../../utils/data"
 import Card from "./Card/Card"
 
 const Wrapper = styled.div`

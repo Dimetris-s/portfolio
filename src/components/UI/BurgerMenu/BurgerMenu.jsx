@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { menuLinks } from "../utils/data"
-import { scrollTo } from "../utils/scrollTo"
+import { menuLinks } from "../../../utils/data"
+import { scrollTo } from "../../../utils/scrollTo"
 
 const Wrapper = styled.div`
 	height: 100vh;
