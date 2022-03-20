@@ -1,15 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import Slider from "./Slider"
-import Container from "./styled/Container"
-import Flex from "./styled/Flex"
-import Title from "./styled/Title"
-import { slides } from "../utils/data"
+import { Container, Flex, Title } from "../styled"
+import Slider from "../common/Slider"
+import { slides } from "../../utils/data"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.black};
-	padding-top: 100px;
-	padding-bottom: 150px;
+	padding-top: min(10vw, 100px);
+	padding-bottom: min(10vw, 150px);
 `
 const PortfolioTitle = styled(Title)`
 	color: #fff;

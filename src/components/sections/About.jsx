@@ -1,27 +1,23 @@
 import React from "react"
 import styled from "styled-components"
-import Container from "./styled/Container"
-import CardList from "./CardList"
-import SkillsTitle from "./styled/Title"
-import bg_img from "../assets/about/about_bg.png"
-import about1 from "../assets/about/about1.jpg"
-import about2 from "../assets/about/about2.jpg"
-import about3 from "../assets/about/about6.png"
-import about4 from "../assets/about/about4.jpg"
+import CardList from "../UI/CardList"
+import { Title as SkillsTitle, Container } from "../styled"
+import bg_img from "../../assets/about/about_bg.png"
+import { aboutImages } from "../../utils/images"
 
 const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.palette.grey};
-	padding: 65px 0 115px;
+	padding: min(65px, 10vw) 0 min(115px, 10vw);
 `
 const Skills = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 5rem;
+	row-gap: min(5rem, 10vw);
 `
 const Info = styled.div`
-	padding-top: 200px;
-	padding-bottom: 60px;
+	padding-top: min(200px, 10vw);
+	padding-bottom: min(60px, 7vw);
 	display: flex;
 	justify-content: center;
 	background: url(${bg_img}) no-repeat;
@@ -97,28 +93,34 @@ const About = () => {
 				<Info id="about">
 					<InfoContent>
 						<Image position={{ top: -13, left: -50 }}>
-							<img src={about1} alt="Dima" />
+							<img src={aboutImages[0]} alt="Dima" />
 						</Image>
 						<Image position={{ left: -50, bottom: -15 }}>
-							<img src={about2} alt="Dima" />
+							<img src={aboutImages[1]} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, top: -11 }}>
-							<img src={about3} alt="Dima" />
+							<img src={aboutImages[2]} alt="Dima" />
 						</Image>
 						<Image position={{ right: -50, bottom: -17 }}>
-							<img src={about4} alt="Dima" />
+							<img src={aboutImages[3]} alt="Dima" />
 						</Image>
 						<Title>About me</Title>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quae vel dolorem veritatis
-							nisi pariatur maxime non velit quo, nam cupiditate quos, perferendis exercitationem ducimus
-							deserunt tenetur fugit molestias aliquid distinctio. Praesentium repellendus beatae minima
-							modi dignissimos ea necessitatibus, inventore doloremque illo ullam accusantium tempora quae
-							molestias? Voluptatem at enim suscipit eveniet itaque fuga consequuntur, commodi, nobis,
-							laudantium quisquam dignissimos quia perspiciatis ipsa mollitia vero autem! Dignissimos
-							dolores optio quod architecto consequuntur autem aut. Atque consequuntur sunt optio
-							consectetur nostrum delectus! Ipsum, atque. Voluptates, non aperiam quae sed ipsam nisi
-							minima consequatur voluptate unde officia quas? Officia accusamus molestias repellendus!
+							Hello again! As you already know my name is Dmitry. I am 23 years old, I
+							was born and live in Odessa (Ukraine). In the past, a professional
+							dancer and performer in theatrical performances and shows. About two
+							years ago I started to be interested in programming as another of my
+							hobbies, and realized pretty quickly that programming could be something
+							more in my life, than just a hobby. I discovered that there are endless
+							possibilities for creativity in this profession, and for my own
+							realization, as well as the ability not to be tied to a certain place
+							and travel, not to mention the fact that this is a profession of the
+							future that develops over time and makes it possible to be part of
+							advanced technologies. I approach my work with responsibility and
+							attention to detail. I know how to listen and always strive to find the
+							best and the optimal solution to the problem. You can see my portfolio
+							below, as well as download my resume, where it is described in more
+							detail my skills.
 						</Text>
 					</InfoContent>
 				</Info>

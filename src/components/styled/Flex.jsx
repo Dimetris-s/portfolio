@@ -6,6 +6,8 @@ const Flex = styled.div`
 	justify-content: ${({ justify }) => justify || "flex-start"};
 	flex-direction: ${({ direction }) => direction || "row"};
 	flex-wrap: ${({ wrap }) => (wrap ? "wrap" : "nowrap")};
+	row-gap: ${({ rowGap }) => rowGap};
+	row-gap: ${({ columnGap }) => columnGap};
 `
 
 export default Flex

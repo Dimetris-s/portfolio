@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import leftArrow from "../assets/slider/arrow-left.svg"
-import rightArrow from "../assets/slider/arrow-right.svg"
-import linkArrow from "../assets/slider/arrow-right-gold.svg"
+import leftArrow from "../../assets/slider/arrow-left.svg"
+import rightArrow from "../../assets/slider/arrow-right.svg"
+import linkArrow from "../../assets/slider/arrow-right-gold.svg"
+import Flex from "../styled/Flex"
 
 const Wrapper = styled.div`
 	position: relative;
 	width: min(1000px, 80vw);
-	height: 500px;
+	height: 350px;
 `
 const SliderWrapper = styled.div`
 	height: 100%;
@@ -32,24 +33,29 @@ const Slide = styled.div`
 	height: 100%;
 	justify-content: space-between;
 	width: 100%;
-	gap: min(50px, 10%);
+	gap: min(20px, 10%);
 	padding: min(35px, 5vw);
 	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
 		flex-direction: column;
 	}
 `
 const Image = styled.div`
-	border-radius: 30px;
+	border-radius: 10px;
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
-	flex: 1.5;
+	flex: 2;
+	@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+		flex: 1.7;
+	}
 
 	& img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		object-position: center;
+		@media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+			object-fit: cover;
+			object-position: top;
+		}
 	}
 `
 
@@ -63,11 +69,14 @@ const SlideContent = styled.div`
 	color: ${({ theme }) => theme.palette.white};
 `
 const SlideTitle = styled.h4`
-	font-size: 24px;
-	font-weight: 300;
+	font-size: 18px;
+	font-weight: 600;
 	margin-bottom: min(20px, 5%);
+	text-align: center;
+	border-bottom: 1px solid gold;
 `
-const SlideText = styled.p`
+const SlideText = styled.div`
+	font-size: 16px;
 	max-height: 300px;
 	overflow-y: auto;
 	flex-grow: 1;
@@ -111,8 +120,8 @@ const Arrow = styled.div`
 	position: absolute;
 	background-color: ${({ theme }) => theme.palette.yellow};
 	border-radius: 50%;
-	width: clamp(45px, 5vw, 60px);
-	height: clamp(45px, 5vw, 60px);
+	width: clamp(35px, 5vw, 60px);
+	height: clamp(35px, 5vw, 60px);
 	top: 50%;
 	left: ${({ direction }) => direction === "left" && "-70px"};
 	right: ${({ direction }) => direction === "right" && "-70px"};
@@ -123,6 +132,11 @@ const Arrow = styled.div`
 	cursor: pointer;
 	opacity: 0.8;
 	transition: all 0.3s ease-in;
+	@media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		/* top: 60%; */
+		left: ${({ direction }) => direction === "left" && "10px"};
+		right: ${({ direction }) => direction === "right" && "10px"};
+	}
 	&:hover {
 		opacity: 1;
 	}
@@ -157,7 +171,16 @@ const Slider = ({ items }) => {
 							</Image>
 							<SlideContent>
 								<SlideTitle>{item.title}</SlideTitle>
-								<SlideText>{item.text}</SlideText>
+								<SlideText>
+									{item.text}
+									{item.lines && (
+										<Flex direction="column" rowGap=".3rem">
+											{item.lines.map((line, idx) => (
+												<p key={idx}>{line}</p>
+											))}
+										</Flex>
+									)}
+								</SlideText>
 								<SlideLink href={item.link}>Discover</SlideLink>
 							</SlideContent>
 						</Slide>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { aboutCards } from "../utils/data"
+import { aboutCards } from "../../utils/data"
 import Card from "./Card/Card"
 
 const Wrapper = styled.div`
@@ -8,6 +8,9 @@ const Wrapper = styled.div`
 	flex-wrap: wrap;
 	gap: max(2vw, 16px);
 	justify-content: center;
+	@media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		flex-direction: column;
+	}
 `
 const CardList = () => {
 	return (

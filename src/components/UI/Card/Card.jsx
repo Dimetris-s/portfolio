@@ -11,21 +11,27 @@ const Text = styled.p`
 	font-size: ${({ theme }) => theme.text.size};
 `
 const List = styled.ul`
+	/* list-style-type: disc; */
+	/* padding-left: 10px; */
 	display: flex;
 	flex-direction: column;
-	row-gap: 0.5rem;
-	/* list-style-type: disc; */
+	row-gap: 0.2rem;
 `
 const ListItem = styled.li`
 	color: ${({ theme }) => theme.palette.white};
 	font-size: ${({ theme }) => theme.text.size};
+	font-weight: 600;
+	border-bottom: 0.1px solid ${({ theme }) => theme.palette.yellow};
+	/* background-color: ${({ theme }) => theme.palette.yellow}; */
+	/* border-radius: 4px; */
+	text-align: center;
 `
 
 const Title = styled.h4`
 	align-self: center;
 	margin-bottom: 10px;
 	color: ${({ theme }) => theme.palette.yellow};
-	font-size: ${({ theme }) => theme.text.size};
+	font-size: 24px;
 	font-weight: 600;
 `
 
@@ -46,7 +52,7 @@ const Card = ({ img, text, index, info }) => {
 					<Title>I'm working with:</Title>
 					<List>
 						{info.map(item => (
-							<ListItem>{item}</ListItem>
+							<ListItem key={item}>{item}</ListItem>
 						))}
 					</List>
 				</div>

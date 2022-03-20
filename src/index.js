@@ -10,11 +10,9 @@ import "aos/dist/aos.css"
 aos.init({ once: true })
 
 ReactDOM.render(
-	<React.StrictMode>
-		<ThemeProvider theme={theme}>
-			<GlobalStyles />
-			<App />
-		</ThemeProvider>
-	</React.StrictMode>,
+	<ThemeProvider theme={theme}>
+		<GlobalStyles />
+		<App />
+	</ThemeProvider>,
 	document.getElementById("root")
 )

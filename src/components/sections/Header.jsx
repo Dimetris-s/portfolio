@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import Navbar from "./Navbar"
-import Title from "./styled/Title"
-import avatar from "../assets/bigphoto.png"
+import Navbar from "../UI/Navbar"
+import avatar from "../../assets/bigphoto.png"
+import Modal from "../common/Modal"
+import { MenuLink, Flex, Title } from "../styled"
+import cv from "../../assets/cv.pdf"
 
 const Wrapper = styled.header`
 	background-color: ${({ theme }) => theme.palette.black};
@@ -18,6 +20,12 @@ const HeaderHero = styled.div`
 	padding-left: 40px;
 	padding-right: 10px;
 	height: 100%;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-left: 10px;
+		padding-top: calc(${({ theme }) => theme.navbar.height} + 40px);
+	}
 `
 
 const Left = styled.div`
@@ -30,6 +38,10 @@ const Left = styled.div`
 const Right = styled.div`
 	flex: 1.7;
 	height: 100%;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		flex: 1;
+		overflow: hidden;
+	}
 `
 
 const Name = styled.h1`
@@ -38,6 +50,10 @@ const Name = styled.h1`
 	font-weight: 700;
 	line-height: 5rem;
 	margin-bottom: 25px;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		font-size: 2rem;
+		line-height: 2rem;
+	}
 `
 
 const About = styled.p`
@@ -76,24 +92,44 @@ const Image = styled.div`
 	}
 `
 
+const Hello = styled(Title)`
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+		font-size: 4.5rem;
+		line-height: 4.5rem;
+		margin-bottom: 1rem;
+	}
+`
+
+const CVLink = styled(MenuLink)`
+	color: ${({ theme }) => theme.palette.yellow};
+	&::after {
+		background-color: ${({ theme }) => theme.palette.blue};
+	}
+`
+
 const Header = () => {
+	const [modalActive, setModalActive] = useState(false)
+	const closeModal = () => setModalActive(false)
 	return (
 		<Wrapper>
 			<Navbar />
-
 			<HeaderHero>
 				<Left>
-					<Title data-aos="fade-right" data-aos-delay="400">
+					<Hello data-aos="fade-right" data-aos-delay="400">
 						Hello
-					</Title>
+					</Hello>
 					<Name data-aos="fade-right" data-aos-delay="600">
 						I’m Dmytro Mudruk
 					</Name>
 					<About data-aos="fade-right" data-aos-delay="800">
-						I've been doing web design, front-end and back-end development for a year now. Do you need a
-						website design, site layout, or maybe a turnkey website? Then contact me
+						I've been doing front-end development for a 1.5 years now. Currently open
+						for suggestions. Check my portfolio and I will be glad to get in touch with
+						you.
 					</About>
-					<Button data-aos="fade-right" data-aos-delay="1000">
+					<Button
+						onClick={() => setModalActive(true)}
+						data-aos="fade-right"
+						data-aos-delay="1000">
 						Contact me
 					</Button>
 				</Left>
@@ -103,6 +139,17 @@ const Header = () => {
 					</Image>
 				</Right>
 			</HeaderHero>
+			<Modal title="Contacts" active={modalActive} onClose={closeModal}>
+				<Flex direction="column" rowGap="0.35rem" align="flex-start">
+					<MenuLink href="mailto:dim3triss@gmail.com">
+						Email: dim3triss@gmail.com
+					</MenuLink>
+					<MenuLink href="tel:+380502875408">Calls: +38 (050) 297-54-08</MenuLink>
+					<CVLink href={cv} download>
+						Download my CV
+					</CVLink>
+				</Flex>
+			</Modal>
 		</Wrapper>
 	)
 }

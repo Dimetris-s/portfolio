@@ -39,7 +39,15 @@
 .back {
 	transform: rotateY(180deg);
 	padding: min(20px, 2vw);
-	align-items: flex-start;
+	align-items: center;
 	flex-direction: column;
 	justify-content: start;
+}
+@media screen and (max-width: 768px) {
+	.card,
+	.front,
+	.back {
+		width: 270px;
+		height: 270px;
+	}
 }
