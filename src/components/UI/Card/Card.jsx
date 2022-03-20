@@ -11,8 +11,6 @@ const Text = styled.p`
 	font-size: ${({ theme }) => theme.text.size};
 `
 const List = styled.ul`
-	/* list-style-type: disc; */
-	/* padding-left: 10px; */
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.2rem;
@@ -22,8 +20,6 @@ const ListItem = styled.li`
 	font-size: ${({ theme }) => theme.text.size};
 	font-weight: 600;
 	border-bottom: 0.1px solid ${({ theme }) => theme.palette.yellow};
-	/* background-color: ${({ theme }) => theme.palette.yellow}; */
-	/* border-radius: 4px; */
 	text-align: center;
 `
 

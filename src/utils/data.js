@@ -43,7 +43,7 @@ export const aboutCards = [
 		info: [
 			"React components",
 			"React hooks",
-			"Redux",
+			"Redux/Redux-toolkit",
 			"Context API",
 			"MUI/styled-components",
 			"CSS-modules",
@@ -135,6 +135,27 @@ export const slides = [
 	},
 	{
 		id: 7,
+		img: sliderImages.cryptomann,
+		title: "Cryptomann Landing page",
+		text: "",
+		link: "http://cryptomann.dmtrs.space/",
+		lines: [
+			"Responsive landing page, that contains a lot of alpha-chanel videoes, some good animation, and custom JS modules",
+		],
+	},
+	{
+		id: 8,
+		img: sliderImages.blog,
+		title: "Simple fullstack SSR blog application",
+		text: "",
+		link: "https://next-test-blog-nqc838goq-dimetris-s.vercel.app/",
+		lines: [
+			"Simple application that implemented with using Next for SSR, and expressJs for server.",
+			"You can create/remove post, or get additional info about any post.",
+		],
+	},
+	{
+		id: 9,
 		img: sliderImages.shop,
 		title: "Online shop",
 		text: "",

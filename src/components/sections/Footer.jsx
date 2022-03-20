@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import cv from "../../assets/cv.pdf"
+import rec from "../../assets/reco.pdf"
 import { MenuLink } from "../styled"
 
 const Wrapper = styled.footer`
@@ -64,6 +65,9 @@ const Footer = () => {
 			<Right>
 				<CVLink href={cv} download>
 					Download my CV
+				</CVLink>
+				<CVLink href={rec} download>
+					Download my recommendation
 				</CVLink>
 			</Right>
 		</Wrapper>

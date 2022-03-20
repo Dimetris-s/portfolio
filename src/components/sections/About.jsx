@@ -106,7 +106,7 @@ const About = () => {
 						</Image>
 						<Title>About me</Title>
 						<Text>
-							Hello again! As you already know my name is Dmitry. I am 23 years old, I
+							Hello again! As you already know my name is Dmitry. I am 24 years old, I
 							was born and live in Odessa (Ukraine). In the past, a professional
 							dancer and performer in theatrical performances and shows. About two
 							years ago I started to be interested in programming as another of my

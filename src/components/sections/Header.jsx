@@ -5,6 +5,7 @@ import avatar from "../../assets/bigphoto.png"
 import Modal from "../common/Modal"
 import { MenuLink, Flex, Title } from "../styled"
 import cv from "../../assets/cv.pdf"
+import rec from "../../assets/reco.pdf"
 
 const Wrapper = styled.header`
 	background-color: ${({ theme }) => theme.palette.black};
@@ -147,6 +148,9 @@ const Header = () => {
 					<MenuLink href="tel:+380502875408">Calls: +38 (050) 297-54-08</MenuLink>
 					<CVLink href={cv} download>
 						Download my CV
+					</CVLink>
+					<CVLink href={rec} download>
+						Download my recommendation
 					</CVLink>
 				</Flex>
 			</Modal>
